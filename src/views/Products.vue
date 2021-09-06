@@ -1,15 +1,22 @@
 <template>
-  <div>
-    <p class="display-1">{{this.$route}}</p>
+  <div class="mt-5 py-3">
+    <SectionHomeVue
+      :title="products[this.$route.params.category.toLowerCase()].title"
+      :description="products[this.$route.params.category.toLowerCase()].description"
+    />
   </div>
 </template>
 
 <script>
-export default {
 
+import {mapState} from 'vuex'
+import SectionHomeVue from '../components/SectionHome.vue'
+export default {
+  components:{
+    SectionHomeVue
+  },
+  computed: {
+    ...mapState(['products'])
+  },
 }
 </script>
-
-<style>
-
-</style>

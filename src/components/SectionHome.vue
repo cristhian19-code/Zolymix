@@ -1,8 +1,8 @@
 <template>
-  <div class="section d-flex flex-wrap justify-content-center px-3 py-5">
+  <div class="d-flex flex-wrap justify-content-center px-3 py-5">
     <div
       data-aos="fade-up"
-      :class="index != 0 ? 'order-sm-0 order-md-1' : 'order-0'"
+      :class="index ? 'order-sm-0 order-md-1' : 'order-0'"
       class="p-5 col-sm-12 col-md-7"
     >
       <p class="display-4">{{ title }}</p>
@@ -32,6 +32,7 @@ export default {
     },
     index: {
       type: Number,
+      default: 1
     },
   },
 };

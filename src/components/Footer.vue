@@ -71,6 +71,9 @@ export default {};
 </script>
 
 <style>
+.bx{
+  cursor: pointer;
+}
 .social {
   font-size: 25px;
 }
